@@ -126,30 +126,33 @@ int BSTree<ItemType>::CountNodes(BSTreeNode<ItemType>* treePtr) const
 template <typename ItemType>
 int BSTree<ItemType>::LevelCount(BSTreeNode<ItemType>* treePtr) const
 {
-int level = 0;
-if (treePtr == NULL)
-{
-return -1;
-}
-else if (rootPtr->leftPtr==NULL && rootPtr->rightPtr==NULL)
-{
-return -1;
-}
-else if (treePtr == rootPtr)
-{
-return level;
-}
-int LevelLeft, LevelRight;
-LevelLeft += BSTree<ItemType>::LevelCount(treePtr->leftPtr);
-LevelRight += BSTree<ItemType>::LevelCount(treePtr->rightPtr);
-if(LevelLeft == -1)
-{
-return LevelRight;
-}
-else
-{
-return LevelLeft;
-}
+    int level = 0;
+    
+    if (treePtr == NULL)
+    {
+        return -1;
+    }
+    else if (rootPtr->leftPtr==NULL && rootPtr->rightPtr==NULL)
+    {
+        return -1;
+    }
+    else if (treePtr == rootPtr)
+    {
+        return level;
+    }
+    
+    int LevelLeft, LevelRight;
+    LevelLeft += BSTree<ItemType>::LevelCount(treePtr->leftPtr);
+    LevelRight += BSTree<ItemType>::LevelCount(treePtr->rightPtr);
+    
+    if(LevelLeft == -1)
+    {
+        return LevelRight;
+    }
+    else
+    {
+        return LevelLeft;
+    }
 }
 
 template <typename ItemType>
