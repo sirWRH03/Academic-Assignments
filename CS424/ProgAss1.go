@@ -147,18 +147,15 @@ func readData(filename string) ([]Player, []ErrorPlayer) {
 }
 
 func (player Player) computeBatAvg() float64 {
-	batavg := float64(player.singles+player.doubles+player.triples+player.homeruns) / float64(player.atbats)
-	return batavg
+	return float64(player.singles+player.doubles+player.triples+player.homeruns) / float64(player.atbats)
 }
 
 func (player Player) computeSlugPct() float64 {
-	slugpct := float64((player.singles + (2 * player.doubles) + (3 * player.triples) + (4 * player.homeruns))) / float64(player.atbats)
-	return slugpct
+	return float64((player.singles + (2 * player.doubles) + (3 * player.triples) + (4 * player.homeruns))) / float64(player.atbats)
 }
 
 func (player Player) computeObp() float64 {
-	obp := float64((player.singles + player.doubles + player.triples + player.homeruns + player.walks + player.hbp)) / float64(player.appearances)
-	return obp
+	return float64((player.singles + player.doubles + player.triples + player.homeruns + player.walks + player.hbp)) / float64(player.appearances)
 }
 
 func outputData(players []Player, errorInputs []ErrorPlayer) {
