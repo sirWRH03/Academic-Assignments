@@ -4,7 +4,7 @@
 
 % Part 1
 countValues(_, [], 0).
-countValues(X, [X | T], Z) :- countValues(X, T, Z2), Z is Z2 + 1.
+countValues(X, [X | T], Z) :- !, countValues(X, T, Z2), Z is Z2 + 1.
 countValues(X, [_ | T], Z) :- countValues(X, T, Z).
 
 % Part 2
