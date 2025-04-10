@@ -9,24 +9,20 @@ package com.mycompany.cs490pgm2;
  * @author bhump
  */
 public class Process{
+
+    // Private member variables
     private final int processID;
     private int processPriority;
     private int processTimeSlice;
     
+    // Constructor
     public Process(int ID, int priority, int timeSlice){
         processID = ID;
         processPriority = priority;
         processTimeSlice = timeSlice;
     }
-    
-    public void priorityChange(int prio){
-        processPriority = prio;
-    }
-    
-    public void timeChange(int time){
-        processTimeSlice = time;
-    }
 
+    // Observers for the private member variables
     public int getProcessID(){
         return processID;
     }
