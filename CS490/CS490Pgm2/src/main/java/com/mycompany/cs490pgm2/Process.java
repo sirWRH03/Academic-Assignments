@@ -26,4 +26,16 @@ public class Process{
     public void timeChange(int time){
         processTimeSlice = time;
     }
+
+    public int getProcessID(){
+        return processID;
+    }
+
+    public int getProcessPriority(){
+        return processPriority;
+    }
+
+    public int getProcessTimeSlice(){
+        return processTimeSlice;
+    }
 }

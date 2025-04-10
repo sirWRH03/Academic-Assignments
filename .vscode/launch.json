@@ -2,6 +2,13 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "java",
+      "name": "CS490Pgm2",
+      "request": "launch",
+      "mainClass": "com.mycompany.cs490pgm2.CS490Pgm2",
+      "projectName": "CS490Pgm2"
+    },
+    {
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
       "request": "launch",
