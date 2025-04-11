@@ -18,6 +18,11 @@ public class Heap {
         return size == 0;
     }
 
+    // observer for the max size of the heap
+    public int getMaxSize() {
+        return maxSize;
+    }
+
     // observer for the parent node of a given node
     public int parent(int i) {
         return (i - 1) / 2;
